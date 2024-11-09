@@ -56,4 +56,7 @@ class RateLimitMiddleware(BaseHTTPMiddleware):
 
         return await call_next(request)
 
-app.add_middleware(RateLimitMiddleware, storage_backend='redis')
+"""
+    How can use that
+    app.add_middleware(RateLimitMiddleware, storage_backend='memory', request_limit=10, ban_duration=600, refill_rate=1)
+"""
